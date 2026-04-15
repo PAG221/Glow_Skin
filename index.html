@@ -5,7 +5,3951 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Skin By Kimi — Soins Premium</title><!doctype html>
+<!-- saved from url=(0045)file:///C:/Users/papea/Downloads/index_1.html -->
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glow Skin By Kimi — Soins Premium</title>
+    <meta
+      name="description"
+      content="Révélez votre glow naturel avec Glow Skin By Kimi. Soins conçus par une cosmétologue experte pour sublimer votre peau."
+    />
+    <style>
+      /* ===================== CSS VARIABLES ===================== */
+      :root {
+        --rose: #c2185b;
+        --rose-light: #e91e8c;
+        --rose-dark: #880e4f;
+        --gold: #d4af37;
+        --gold-light: #f0d060;
+        --white: #ffffff;
+        --cream: #fdf8f5;
+        --dark: #1a0a10;
+        --gray: #7a6070;
+        --border: #f0e0e8;
+        --shadow: 0 8px 40px rgba(194, 24, 91, 0.15);
+        --shadow-lg: 0 20px 60px rgba(194, 24, 91, 0.22);
+        --radius: 18px;
+        --font-display: "Georgia", "Palatino Linotype", "Book Antiqua", serif;
+        --font-body:
+          "Trebuchet MS", "Gill Sans", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      /* ===================== RESET & BASE ===================== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: var(--font-body);
+        background: var(--white);
+        color: var(--dark);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-family: var(--font-body);
+      }
+      ul {
+        list-style: none;
+      }
+
+      /* ===================== SCROLLBAR ===================== */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--cream);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--rose);
+        border-radius: 3px;
+      }
+
+      /* ===================== ANIMATIONS ===================== */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: -200% center;
+        }
+        100% {
+          background-position: 200% center;
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(194, 24, 91, 0.4);
+        }
+        50% {
+          transform: scale(1.04);
+          box-shadow: 0 0 0 12px rgba(194, 24, 91, 0);
+        }
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes ticker {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes cartBounce {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.3);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-40px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+      .reveal-right {
+        opacity: 0;
+        transform: translateX(40px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+      .reveal-left.visible,
+      .reveal-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* ===================== UTILITY ===================== */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .section-label {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 400;
+        line-height: 1.2;
+        color: var(--dark);
+        margin-bottom: 16px;
+      }
+      .section-sub {
+        font-size: 1rem;
+        color: var(--gray);
+        max-width: 560px;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+        color: var(--white);
+        padding: 16px 36px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 24px rgba(194, 24, 91, 0.4);
+        position: relative;
+        overflow: hidden;
+      }
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+      .btn-primary:hover::before {
+        left: 100%;
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px rgba(194, 24, 91, 0.5);
+      }
+      .btn-gold {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--gold), #b8962e);
+        color: var(--dark);
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 24px rgba(212, 175, 55, 0.4);
+      }
+      .btn-gold:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 36px rgba(212, 175, 55, 0.5);
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 2px solid var(--rose);
+        color: var(--rose);
+        padding: 13px 30px;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        background: transparent;
+      }
+      .btn-outline:hover {
+        background: var(--rose);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      /* ===================== ANNOUNCEMENT BAR ===================== */
+      .announcement-bar {
+        background: linear-gradient(135deg, var(--rose-dark), var(--rose));
+        color: var(--white);
+        padding: 10px 0;
+        overflow: hidden;
+        position: relative;
+        z-index: 1000;
+      }
+      .ticker-wrap {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+      }
+      .ticker-content {
+        display: flex;
+        white-space: nowrap;
+        animation: ticker 25s linear infinite;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .ticker-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 40px;
+      }
+      .ticker-item::after {
+        content: "✦";
+        color: var(--gold);
+        margin-left: 40px;
+      }
+
+      /* ===================== HEADER ===================== */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+        transition: box-shadow 0.3s;
+      }
+      header.scrolled {
+        box-shadow: 0 4px 30px rgba(194, 24, 91, 0.12);
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .logo {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+      .logo-text {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--rose);
+        letter-spacing: 1px;
+      }
+      .logo-sub {
+        font-size: 9px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 700;
+        margin-top: 2px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 36px;
+        align-items: center;
+      }
+      .nav-links a {
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--dark);
+        transition: color 0.3s;
+        position: relative;
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--rose);
+        transition: width 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--rose);
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .cart-btn {
+        position: relative;
+        background: var(--cream);
+        border: 1px solid var(--border);
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+      .cart-btn:hover {
+        background: var(--rose);
+        border-color: var(--rose);
+      }
+      .cart-btn:hover .cart-icon {
+        filter: brightness(0) invert(1);
+      }
+      .cart-badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background: var(--rose);
+        color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        font-size: 11px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        transition: transform 0.3s;
+      }
+      .cart-badge.bounce {
+        animation: cartBounce 0.4s ease;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 8px;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: var(--dark);
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+
+      /* ===================== CART SIDEBAR ===================== */
+      .cart-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+      .cart-overlay.open {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .cart-sidebar {
+        position: fixed;
+        top: 0;
+        right: -420px;
+        width: 420px;
+        height: 100vh;
+        background: var(--white);
+        z-index: 2001;
+        display: flex;
+        flex-direction: column;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+      }
+      .cart-sidebar.open {
+        right: 0;
+      }
+      .cart-header {
+        padding: 24px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .cart-title {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        color: var(--dark);
+      }
+      .cart-close {
+        background: var(--cream);
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      }
+      .cart-close:hover {
+        background: var(--rose);
+        color: white;
+      }
+      .cart-items {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px;
+      }
+      .cart-empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 16px;
+        color: var(--gray);
+      }
+      .cart-empty-icon {
+        font-size: 3rem;
+        opacity: 0.4;
+      }
+      .cart-item {
+        display: flex;
+        gap: 16px;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--border);
+        animation: fadeInUp 0.3s ease;
+      }
+      .cart-item-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .cart-item-info {
+        flex: 1;
+      }
+      .cart-item-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+      .cart-item-price {
+        color: var(--rose);
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+      .cart-item-qty {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
+      .qty-btn {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: var(--cream);
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        color: var(--dark);
+      }
+      .qty-btn:hover {
+        background: var(--rose);
+        border-color: var(--rose);
+        color: white;
+      }
+      .qty-num {
+        font-weight: 700;
+        font-size: 0.9rem;
+        min-width: 20px;
+        text-align: center;
+      }
+      .cart-remove {
+        color: var(--gray);
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: color 0.2s;
+        background: none;
+        border: none;
+        padding: 0;
+      }
+      .cart-remove:hover {
+        color: var(--rose);
+      }
+      .cart-footer {
+        padding: 24px;
+        border-top: 1px solid var(--border);
+        background: var(--cream);
+      }
+      .cart-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .cart-total-label {
+        font-size: 0.9rem;
+        color: var(--gray);
+      }
+      .cart-total-price {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--dark);
+      }
+      .cart-checkout {
+        width: 100%;
+        padding: 16px;
+        background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-bottom: 10px;
+      }
+      .cart-checkout:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(194, 24, 91, 0.4);
+      }
+      .cart-whatsapp {
+        width: 100%;
+        padding: 14px;
+        background: #25d366;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .cart-whatsapp:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      }
+
+      /* ===================== HERO ===================== */
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: var(--dark);
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+      .hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.55;
+        transform: scale(1.05);
+        animation: heroZoom 8s ease-in-out infinite alternate;
+      }
+      @keyframes heroZoom {
+        from {
+          transform: scale(1.05);
+        }
+        to {
+          transform: scale(1.12);
+        }
+      }
+      .hero-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(26, 10, 16, 0.85) 0%,
+          rgba(136, 14, 79, 0.4) 50%,
+          rgba(26, 10, 16, 0.6) 100%
+        );
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 120px 20px 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 60px;
+        width: 100%;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(212, 175, 55, 0.15);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        color: var(--gold-light);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        animation: fadeInUp 0.8s ease 0.2s both;
+      }
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+        font-weight: 400;
+        color: var(--white);
+        line-height: 1.1;
+        margin-bottom: 24px;
+        animation: fadeInUp 0.8s ease 0.4s both;
+      }
+      .hero-title em {
+        font-style: italic;
+        color: var(--gold-light);
+      }
+      .hero-sub {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 480px;
+        line-height: 1.7;
+        margin-bottom: 36px;
+        animation: fadeInUp 0.8s ease 0.6s both;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        animation: fadeInUp 0.8s ease 0.8s both;
+      }
+      .hero-trust {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+        animation: fadeInUp 0.8s ease 1s both;
+      }
+      .hero-trust-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.85rem;
+      }
+      .hero-trust-item span {
+        color: var(--gold-light);
+        font-size: 1.1rem;
+      }
+      .hero-right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        animation: fadeInRight 0.8s ease 0.6s both;
+      }
+      .hero-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 24px;
+        transition: transform 0.3s;
+      }
+      .hero-card:hover {
+        transform: translateY(-4px);
+      }
+      .hero-stat-label {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .hero-stat-value {
+        font-family: var(--font-display);
+        font-size: 2.2rem;
+        color: var(--white);
+        font-weight: 400;
+      }
+      .hero-stat-value span {
+        color: var(--gold-light);
+      }
+      .hero-product-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .hero-product-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 12px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .hero-product-name {
+        font-weight: 700;
+        color: white;
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+      }
+      .hero-product-price {
+        color: var(--gold-light);
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .hero-product-badge {
+        background: var(--rose);
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 50px;
+        letter-spacing: 1px;
+        display: inline-block;
+        margin-top: 6px;
+      }
+      .scroll-indicator {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .scroll-line {
+        width: 1px;
+        height: 50px;
+        background: linear-gradient(to bottom, var(--gold), transparent);
+        animation: scrollPulse 2s ease-in-out infinite;
+      }
+      @keyframes scrollPulse {
+        0%,
+        100% {
+          opacity: 0.3;
+          height: 40px;
+        }
+        50% {
+          opacity: 1;
+          height: 60px;
+        }
+      }
+
+      /* ===================== STATS BAR ===================== */
+      .stats-bar {
+        background: linear-gradient(135deg, var(--rose-dark), var(--rose));
+        padding: 40px 0;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+      }
+      .stat-item:last-child {
+        border-right: none;
+      }
+      .stat-number {
+        font-family: var(--font-display);
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: var(--white);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .stat-number em {
+        font-style: normal;
+        color: var(--gold-light);
+      }
+      .stat-label {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.75);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      /* ===================== PRODUCTS ===================== */
+      .products {
+        padding: 100px 0;
+        background: var(--cream);
+      }
+      .section-head {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+      .product-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        position: relative;
+      }
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+      }
+      .product-img {
+        position: relative;
+        height: 260px;
+        overflow: hidden;
+      }
+      .product-img img {
+        transition: transform 0.6s ease;
+      }
+      .product-card:hover .product-img img {
+        transform: scale(1.08);
+      }
+      .product-badges {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        z-index: 2;
+      }
+      .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .badge-bestseller {
+        background: var(--gold);
+        color: var(--dark);
+      }
+      .badge-hot {
+        background: var(--rose);
+        color: white;
+      }
+      .badge-new {
+        background: var(--dark);
+        color: white;
+      }
+      .badge-limited {
+        background: #ff6b35;
+        color: white;
+      }
+      .product-wishlist {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 2;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        border: none;
+      }
+      .product-wishlist:hover {
+        background: var(--rose);
+        color: white;
+        transform: scale(1.1);
+      }
+      .product-info {
+        padding: 20px;
+      }
+      .product-cat {
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .product-name {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--dark);
+        margin-bottom: 8px;
+        line-height: 1.3;
+      }
+      .product-desc {
+        font-size: 0.82rem;
+        color: var(--gray);
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+      .stars {
+        color: var(--gold);
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+      .reviews-count {
+        font-size: 0.78rem;
+        color: var(--gray);
+        margin-bottom: 12px;
+      }
+      .product-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+      }
+      .product-price {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: var(--rose);
+      }
+      .product-price-old {
+        font-size: 0.85rem;
+        color: var(--gray);
+        text-decoration: line-through;
+        margin-top: 2px;
+      }
+      .add-to-cart {
+        background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+        color: white;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .add-to-cart:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(194, 24, 91, 0.4);
+      }
+      .add-to-cart.added {
+        background: #28a745;
+      }
+
+      /* ===================== TESTIMONIALS ===================== */
+      .testimonials {
+        padding: 100px 0;
+        background: var(--white);
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        margin-top: 60px;
+      }
+      .testimonial-card {
+        background: var(--cream);
+        border-radius: var(--radius);
+        padding: 30px;
+        position: relative;
+        border: 1px solid var(--border);
+        transition: all 0.3s;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow);
+        border-color: var(--rose);
+      }
+      .testimonial-quote {
+        font-size: 3rem;
+        color: var(--rose);
+        line-height: 1;
+        font-family: var(--font-display);
+        opacity: 0.3;
+        margin-bottom: -10px;
+      }
+      .testimonial-text {
+        font-size: 0.92rem;
+        color: var(--dark);
+        line-height: 1.7;
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 2px solid var(--rose);
+      }
+      .testimonial-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--dark);
+      }
+      .testimonial-loc {
+        font-size: 0.8rem;
+        color: var(--gray);
+      }
+      .verified-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: rgba(194, 24, 91, 0.08);
+        color: var(--rose);
+        font-size: 10px;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 50px;
+        margin-top: 4px;
+        letter-spacing: 0.5px;
+      }
+      .social-proof-bar {
+        background: linear-gradient(135deg, #fdf0f5, #fff8f0);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 30px;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .sp-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .sp-icon {
+        font-size: 2rem;
+      }
+      .sp-text {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--dark);
+      }
+      .sp-sub {
+        font-size: 0.78rem;
+        color: var(--gray);
+      }
+
+      /* ===================== BEFORE/AFTER ===================== */
+      .before-after {
+        padding: 100px 0;
+        background: var(--dark);
+        position: relative;
+        overflow: hidden;
+      }
+      .before-after::before {
+        content: "";
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(194, 24, 91, 0.15),
+          transparent 70%
+        );
+      }
+      .before-after .section-title {
+        color: white;
+      }
+      .before-after .section-sub {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .ba-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        margin-top: 50px;
+      }
+      .ba-card {
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+        background: #111;
+      }
+      .ba-images {
+        position: relative;
+        height: 320px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .ba-side {
+        position: relative;
+        overflow: hidden;
+      }
+      .ba-label {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 50px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .ba-divider {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 100%;
+        background: var(--gold);
+        z-index: 2;
+      }
+      .ba-divider::after {
+        content: "✦";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--gold);
+        color: var(--dark);
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+      }
+      .ba-info {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .ba-product {
+        font-weight: 700;
+        color: white;
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+      }
+      .ba-weeks {
+        color: var(--gold-light);
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      /* ===================== ABOUT ===================== */
+      .about {
+        padding: 100px 0;
+        background: var(--cream);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .about-img-wrap {
+        position: relative;
+      }
+      .about-img-main {
+        width: 100%;
+        height: 520px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+      }
+      .about-img-accent {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 6px solid white;
+        box-shadow: var(--shadow);
+        z-index: 2;
+      }
+      .about-badge-float {
+        position: absolute;
+        top: 30px;
+        left: -20px;
+        background: var(--rose);
+        color: white;
+        padding: 16px 20px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        z-index: 2;
+        text-align: center;
+        animation: float 4s ease-in-out infinite;
+      }
+      .about-badge-float .num {
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: var(--font-display);
+      }
+      .about-badge-float .lab {
+        font-size: 11px;
+        opacity: 0.9;
+      }
+      .about-credentials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 28px 0;
+      }
+      .credential {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: white;
+        border: 1px solid var(--border);
+        padding: 10px 18px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--dark);
+      }
+      .credential .icon {
+        color: var(--rose);
+      }
+      .about-values {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 30px;
+      }
+      .about-value {
+        background: white;
+        border: 1px solid var(--border);
+        padding: 20px;
+        border-radius: 14px;
+        transition: all 0.3s;
+      }
+      .about-value:hover {
+        border-color: var(--rose);
+        transform: translateY(-4px);
+      }
+      .about-value-icon {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+      }
+      .about-value-title {
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+        color: var(--dark);
+      }
+      .about-value-text {
+        font-size: 0.8rem;
+        color: var(--gray);
+      }
+
+      /* ===================== SERVICES ===================== */
+      .services {
+        padding: 100px 0;
+        background: var(--white);
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 60px;
+      }
+      .service-card {
+        background: var(--cream);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        transition: all 0.4s;
+        position: relative;
+      }
+      .service-card:hover {
+        border-color: var(--rose);
+        transform: translateY(-8px);
+        box-shadow: var(--shadow);
+      }
+      .service-img {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+      }
+      .service-img img {
+        transition: transform 0.6s;
+      }
+      .service-card:hover .service-img img {
+        transform: scale(1.08);
+      }
+      .service-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(136, 14, 79, 0.7),
+          transparent
+        );
+      }
+      .service-body {
+        padding: 26px;
+      }
+      .service-icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+      }
+      .service-title {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--dark);
+      }
+      .service-desc {
+        font-size: 0.85rem;
+        color: var(--gray);
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+      .service-price {
+        color: var(--rose);
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      /* ===================== URGENCY ===================== */
+      .urgency {
+        padding: 80px 0;
+        background: linear-gradient(135deg, var(--dark), var(--rose-dark));
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .urgency::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .urgency-content {
+        position: relative;
+        z-index: 1;
+      }
+      .urgency-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--gold-light);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+      }
+      .urgency-title {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: white;
+        margin-bottom: 16px;
+        font-weight: 400;
+      }
+      .urgency-sub {
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 500px;
+        margin: 0 auto 36px;
+        font-size: 1rem;
+      }
+      .urgency-actions {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .countdown-wrap {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        margin-bottom: 36px;
+      }
+      .countdown-item {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        padding: 16px 24px;
+        min-width: 80px;
+        text-align: center;
+      }
+      .countdown-num {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        color: white;
+        font-weight: 400;
+        line-height: 1;
+      }
+      .countdown-lab {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 4px;
+      }
+      .stock-bar {
+        max-width: 400px;
+        margin: 0 auto 30px;
+      }
+      .stock-text {
+        display: flex;
+        justify-content: space-between;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+      }
+      .stock-track {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .stock-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--gold), var(--gold-light));
+        border-radius: 4px;
+        width: 72%;
+        position: relative;
+        overflow: hidden;
+      }
+      .stock-fill::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        animation: shimmer 2s infinite;
+      }
+
+      /* ===================== INSTAGRAM / SOCIAL ===================== */
+      .social-wall {
+        padding: 80px 0;
+        background: var(--cream);
+      }
+      .insta-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+        margin-top: 40px;
+      }
+      .insta-item {
+        aspect-ratio: 1;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .insta-item:hover .insta-overlay {
+        opacity: 1;
+      }
+      .insta-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(194, 24, 91, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      /* ===================== GUARANTEES ===================== */
+      .guarantees {
+        padding: 60px 0;
+        background: white;
+      }
+      .guarantees-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+      .guarantee-item {
+        text-align: center;
+        padding: 30px 20px;
+        border-right: 1px solid var(--border);
+        transition: background 0.3s;
+      }
+      .guarantee-item:last-child {
+        border-right: none;
+      }
+      .guarantee-item:hover {
+        background: var(--cream);
+      }
+      .guarantee-icon {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+      }
+      .guarantee-title {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--dark);
+        margin-bottom: 6px;
+      }
+      .guarantee-text {
+        font-size: 0.82rem;
+        color: var(--gray);
+      }
+
+      /* ===================== NEWSLETTER ===================== */
+      .newsletter {
+        padding: 80px 0;
+        background: linear-gradient(135deg, #fdf0f5, #fff8f0);
+      }
+      .newsletter-inner {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 30px;
+        padding: 60px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+      .newsletter-inner::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(194, 24, 91, 0.08),
+          transparent 70%
+        );
+      }
+      .newsletter-form {
+        display: flex;
+        gap: 12px;
+        max-width: 480px;
+        margin: 30px auto 0;
+      }
+      .newsletter-input {
+        flex: 1;
+        padding: 14px 20px;
+        border: 2px solid var(--border);
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-family: var(--font-body);
+        transition: border-color 0.3s;
+        outline: none;
+        color: var(--dark);
+      }
+      .newsletter-input:focus {
+        border-color: var(--rose);
+      }
+      .newsletter-input::placeholder {
+        color: var(--gray);
+      }
+
+      /* ===================== CONTACT ===================== */
+      .contact {
+        padding: 100px 0;
+        background: var(--cream);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .contact-info {
+      }
+      .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 30px;
+      }
+      .contact-method {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        transition: all 0.3s;
+      }
+      .contact-method:hover {
+        border-color: var(--rose);
+        transform: translateX(6px);
+      }
+      .cm-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        flex-shrink: 0;
+      }
+      .cm-label {
+        font-size: 0.8rem;
+        color: var(--gray);
+        margin-bottom: 2px;
+      }
+      .cm-value {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--dark);
+      }
+      .contact-form-wrap {
+        background: white;
+        border-radius: var(--radius);
+        padding: 40px;
+        box-shadow: var(--shadow);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--dark);
+        margin-bottom: 8px;
+      }
+      .form-input,
+      .form-textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        font-size: 0.9rem;
+        font-family: var(--font-body);
+        transition: border-color 0.3s;
+        outline: none;
+        color: var(--dark);
+        background: var(--cream);
+      }
+      .form-input:focus,
+      .form-textarea:focus {
+        border-color: var(--rose);
+        background: white;
+      }
+      .form-textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      /* ===================== FOOTER ===================== */
+      footer {
+        background: var(--dark);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 80px 0 30px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 60px;
+      }
+      .footer-brand .logo-text {
+        color: white;
+      }
+      .footer-brand .logo-sub {
+        color: var(--gold);
+      }
+      .footer-brand-text {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.7;
+        margin: 16px 0 24px;
+        max-width: 280px;
+      }
+      .social-links {
+        display: flex;
+        gap: 12px;
+      }
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        transition: all 0.3s;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .social-link:hover {
+        background: var(--rose);
+        border-color: var(--rose);
+        color: white;
+        transform: translateY(-3px);
+      }
+      .footer-col-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 20px;
+      }
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-links a {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.55);
+        transition: color 0.3s;
+      }
+      .footer-links a:hover {
+        color: white;
+        padding-left: 6px;
+      }
+      .footer-bottom {
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .footer-bottom-text {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.35);
+      }
+      .footer-badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .footer-badge {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 6px 14px;
+        border-radius: 50px;
+        font-size: 10px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.4);
+        letter-spacing: 0.5px;
+      }
+
+      /* ===================== STICKY WHATSAPP ===================== */
+      .whatsapp-sticky {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+      }
+      .whatsapp-tooltip {
+        background: white;
+        border-radius: 12px;
+        padding: 10px 16px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--dark);
+        max-width: 180px;
+        text-align: center;
+        border: 1px solid var(--border);
+        animation: fadeInRight 0.5s ease 2s both;
+        display: none;
+      }
+      .whatsapp-tooltip.show {
+        display: block;
+      }
+      .whatsapp-btn {
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        cursor: pointer;
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+        animation: pulse 2.5s ease-in-out infinite;
+        border: none;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.3s;
+      }
+      .whatsapp-btn:hover {
+        transform: scale(1.1);
+        animation: none;
+      }
+      .whatsapp-ring {
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        border: 2px solid rgba(37, 211, 102, 0.4);
+        animation: wRing 2.5s ease-in-out infinite;
+      }
+      @keyframes wRing {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+        50% {
+          transform: scale(1.3);
+          opacity: 0;
+        }
+      }
+
+      /* ===================== MOBILE NAV DRAWER ===================== */
+      .mobile-nav {
+        position: fixed;
+        inset: 0;
+        z-index: 3000;
+        pointer-events: none;
+      }
+      .mobile-nav-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .mobile-nav-drawer {
+        position: absolute;
+        top: 0;
+        left: -300px;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        padding: 30px 24px;
+        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        overflow-y: auto;
+      }
+      .mobile-nav.open {
+        pointer-events: all;
+      }
+      .mobile-nav.open .mobile-nav-overlay {
+        opacity: 1;
+      }
+      .mobile-nav.open .mobile-nav-drawer {
+        left: 0;
+      }
+      .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .mobile-nav-links a {
+        padding: 12px 16px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--dark);
+        border-radius: 10px;
+        transition: all 0.2s;
+        display: block;
+      }
+      .mobile-nav-links a:hover {
+        background: var(--cream);
+        color: var(--rose);
+        padding-left: 20px;
+      }
+      .mobile-nav-close {
+        background: var(--cream);
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        align-self: flex-end;
+      }
+
+      /* ===================== RESPONSIVE ===================== */
+      @media (max-width: 1024px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+        }
+        .hero-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .hero-right {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .insta-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .hero-content {
+          padding: 100px 20px 60px;
+        }
+        .hero-right {
+          grid-template-columns: 1fr;
+        }
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .stat-item:nth-child(2) {
+          border-right: none;
+        }
+        .stat-item:nth-child(3) {
+          border-right: none;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .stat-item:nth-child(4) {
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .products-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+        .ba-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        .guarantees-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .guarantee-item:nth-child(2) {
+          border-right: none;
+        }
+        .guarantee-item:nth-child(3) {
+          border-top: 1px solid var(--border);
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .newsletter-form {
+          flex-direction: column;
+        }
+        .countdown-wrap {
+          gap: 8px;
+        }
+        .countdown-item {
+          padding: 12px 16px;
+          min-width: 60px;
+        }
+        .countdown-num {
+          font-size: 1.8rem;
+        }
+        .newsletter-inner {
+          padding: 36px 24px;
+        }
+        .cart-sidebar {
+          width: 100vw;
+          right: -100vw;
+        }
+        .insta-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .about-img-accent {
+          display: none;
+        }
+        .about-badge-float {
+          left: 0;
+        }
+        .about-values {
+          grid-template-columns: 1fr;
+        }
+        .social-proof-bar {
+          flex-direction: column;
+          gap: 16px;
+        }
+        .whatsapp-sticky {
+          bottom: 20px;
+          right: 20px;
+        }
+        .hero-trust {
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+      }
+      @media (max-width: 480px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+        .guarantees-grid {
+          grid-template-columns: 1fr;
+        }
+        .guarantee-item {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+        .insta-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero-actions {
+          flex-direction: column;
+        }
+        .hero-actions .btn-primary,
+        .hero-actions .btn-outline {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===================== ANNOUNCEMENT BAR ===================== -->
+    <div class="announcement-bar">
+      <div class="ticker-wrap">
+        <div class="ticker-content">
+          <span class="ticker-item"
+            >🌟 Livraison gratuite dès 25 000 FCFA d'achat</span
+          >
+          <span class="ticker-item">✨ Résultats visibles dès 7 jours</span>
+          <span class="ticker-item">🔥 Offre limitée — Stock disponible</span>
+          <span class="ticker-item">💎 +400 000 clientes satisfaites</span>
+          <span class="ticker-item"
+            >🌟 Livraison gratuite dès 25 000 FCFA d'achat</span
+          >
+          <span class="ticker-item">✨ Résultats visibles dès 7 jours</span>
+          <span class="ticker-item">🔥 Offre limitée — Stock disponible</span>
+          <span class="ticker-item">💎 +400 000 clientes satisfaites</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== HEADER ===================== -->
+    <header id="header" class="scrolled">
+      <nav>
+        <a href="#" class="logo">
+          <span class="logo-text">Glow Skin By Kimi</span>
+          <span class="logo-sub">Soins Premium ✦ Dakar</span>
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="#produits">Produits</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#avant-apres">Résultats</a>
+          </li>
+          <li>
+            <a href="#about">À Propos</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button class="cart-btn" id="cartBtn" aria-label="Panier">
+            <span class="cart-icon">🛍️</span>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </button>
+          <a
+            href="https://wa.me/221777502375"
+            class="btn-primary"
+            style="padding: 10px 20px; font-size: 0.85rem"
+            target="_blank"
+          >
+            💬 WhatsApp
+          </a>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===================== MOBILE NAV ===================== -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+      <div class="mobile-nav-drawer">
+        <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+        <div class="logo">
+          <span class="logo-text">Glow Skin By Kimi</span>
+          <span class="logo-sub">Soins Premium</span>
+        </div>
+        <ul class="mobile-nav-links">
+          <li>
+            <a href="#produits" onclick="closeMobileNav()">Produits</a>
+          </li>
+          <li>
+            <a href="#services" onclick="closeMobileNav()">Services</a>
+          </li>
+          <li>
+            <a href="#avant-apres" onclick="closeMobileNav()">Résultats</a>
+          </li>
+          <li>
+            <a href="#about" onclick="closeMobileNav()">À Propos</a>
+          </li>
+          <li>
+            <a href="#contact" onclick="closeMobileNav()">Contact</a>
+          </li>
+        </ul>
+        <a
+          href="https://wa.me/221777502375"
+          class="btn-primary"
+          target="_blank"
+          style="text-align: center; justify-content: center"
+        >
+          💬 Commander sur WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- ===================== CART SIDEBAR ===================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <span class="cart-title">🛍️ Mon Panier</span>
+        <button class="cart-close" id="cartClose">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">
+          <div class="cart-empty-icon">🛍️</div>
+          <div style="font-weight: 700; color: var(--dark)">
+            Votre panier est vide
+          </div>
+          <div style="font-size: 0.85rem">Découvrez nos soins premium</div>
+          <button class="btn-primary" onclick="closeCart()">
+            Explorer les produits
+          </button>
+        </div>
+      </div>
+      <div class="cart-footer" id="cartFooter" style="display: none">
+        <div class="cart-total">
+          <div>
+            <div class="cart-total-label">Total</div>
+            <div class="cart-total-price" id="cartTotal">0 FCFA</div>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--gray); text-align: right">
+            🔒 Paiement sécurisé<br />🚚 Livraison rapide
+          </div>
+        </div>
+        <button class="cart-checkout" onclick="orderWhatsApp()">
+          💳 Commander maintenant
+        </button>
+        <button class="cart-whatsapp" onclick="orderWhatsApp()">
+          <span>💬</span> Commander via WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="accueil">
+      <div class="hero-bg">
+        <img
+          src="./Glow Skin By Kimi — Soins Premium_files/photo-1596462502278-27bfdc403348"
+          alt="Glow Skin Premium"
+        />
+      </div>
+      <div class="hero-gradient"></div>
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-badge">✦ &nbsp; Cosmétologie de Luxe &nbsp; ✦</div>
+          <h1 class="hero-title">
+            Révélez votre<br />
+            <em>Glow naturel</em>
+          </h1>
+          <p class="hero-sub">
+            Des soins conçus par une cosmétologue experte pour sublimer votre
+            peau. Faites confiance à la science et à la nature.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="#produits"
+              class="btn-primary"
+              style="animation: pulse 2.5s 2s infinite"
+            >
+              👉 Commander maintenant
+            </a>
+            <a
+              href="#avant-apres"
+              class="btn-outline"
+              style="border-color: rgba(255, 255, 255, 0.5); color: white"
+            >
+              ✨ Voir les résultats
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-item"><span>🔒</span> Paiement sécurisé</div>
+            <div class="hero-trust-item"><span>🚚</span> Livraison rapide</div>
+            <div class="hero-trust-item">
+              <span>⭐</span> Résultats garantis
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-stat-label">Clientes satisfaites</div>
+            <div class="hero-stat-value"><span>400K</span>+</div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-stat-label">Interactions &amp; Likes</div>
+            <div class="hero-stat-value"><span>4M</span>+</div>
+          </div>
+          <div class="hero-product-card">
+            <div class="hero-product-img">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1620916566398-39f1143ab7be"
+                alt="Sérum Glow"
+              />
+            </div>
+            <div>
+              <div class="hero-product-name">Sérum Glow Éclat</div>
+              <div class="hero-product-price">35 000 FCFA</div>
+              <span class="hero-product-badge">🔥 BEST SELLER</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Découvrir</span>
+      </div>
+    </section>
+
+    <!-- ===================== STATS BAR ===================== -->
+    <section class="stats-bar">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal visible">
+            <div class="stat-number">
+              <span class="count" data-target="400">400</span><em>K+</em>
+            </div>
+            <div class="stat-label">Clientes satisfaites</div>
+          </div>
+          <div class="stat-item reveal visible" style="transition-delay: 0.15s">
+            <div class="stat-number">
+              <span class="count" data-target="4">4</span><em>M+</em>
+            </div>
+            <div class="stat-label">Interactions sociales</div>
+          </div>
+          <div class="stat-item reveal visible" style="transition-delay: 0.3s">
+            <div class="stat-number">
+              <span class="count" data-target="7">7</span><em> ans</em>
+            </div>
+            <div class="stat-label">D'expertise cosmétique</div>
+          </div>
+          <div class="stat-item reveal visible" style="transition-delay: 0.45s">
+            <div class="stat-number">
+              <span class="count" data-target="98">98</span><em>%</em>
+            </div>
+            <div class="stat-label">Taux de satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GUARANTEES ===================== -->
+    <section class="guarantees">
+      <div class="container">
+        <div class="guarantees-grid">
+          <div class="guarantee-item reveal visible">
+            <div class="guarantee-icon">🔒</div>
+            <div class="guarantee-title">Paiement Sécurisé</div>
+            <div class="guarantee-text">
+              Toutes vos transactions sont 100% protégées
+            </div>
+          </div>
+          <div
+            class="guarantee-item reveal visible"
+            style="transition-delay: 0.1s"
+          >
+            <div class="guarantee-icon">🚚</div>
+            <div class="guarantee-title">Livraison Rapide</div>
+            <div class="guarantee-text">
+              Dakar en 24h — Autres villes en 48h
+            </div>
+          </div>
+          <div
+            class="guarantee-item reveal visible"
+            style="transition-delay: 0.2s"
+          >
+            <div class="guarantee-icon">✨</div>
+            <div class="guarantee-title">Résultats Visibles</div>
+            <div class="guarantee-text">
+              Effets garantis dès la première semaine
+            </div>
+          </div>
+          <div
+            class="guarantee-item reveal visible"
+            style="transition-delay: 0.3s"
+          >
+            <div class="guarantee-icon">💬</div>
+            <div class="guarantee-title">Support 24/7</div>
+            <div class="guarantee-text">
+              Kimi et son équipe répondent toujours
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTS ===================== -->
+    <section class="products" id="produits">
+      <div class="container">
+        <div class="section-head reveal visible">
+          <div class="section-label">✦ Notre Collection ✦</div>
+          <h2 class="section-title">Nos Soins Signature</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            Formules exclusives développées par Kimi pour révéler l'éclat
+            naturel de votre peau.
+          </p>
+        </div>
+        <div class="products-grid" id="productsGrid">
+          <div class="product-card reveal visible" style="transition-delay: 0s">
+            <div class="product-img">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1620916566398-39f1143ab7be(1)"
+                alt="Sérum Glow Éclat"
+                loading="lazy"
+              />
+              <div class="product-badges">
+                <span class="badge badge-bestseller">⭐ Best Seller</span
+                ><span class="badge badge-hot">🔥 Très demandé</span>
+              </div>
+              <button class="product-wishlist" title="Favoris">♡</button>
+            </div>
+            <div class="product-info">
+              <div class="product-cat">Soins du Visage</div>
+              <div class="product-name">Sérum Glow Éclat</div>
+              <p class="product-desc">
+                Notre sérum signature pour un teint lumineux. Formule à l'acide
+                hyaluronique et vitamine C.
+              </p>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="reviews-count">2 840 avis clients</div>
+              <div class="product-footer">
+                <div>
+                  <div class="product-price">35 000 FCFA</div>
+                  <div class="product-price-old">42 000 FCFA</div>
+                </div>
+                <button
+                  class="add-to-cart"
+                  onclick="addToCart(1)"
+                  data-product-id="1"
+                >
+                  🛍️ Ajouter
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card reveal visible"
+            style="transition-delay: 0.1s"
+          >
+            <div class="product-img">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1571781926291-c477ebfd024b"
+                alt="Crème Hydratante Luxe"
+                loading="lazy"
+              />
+              <div class="product-badges">
+                <span class="badge badge-new">✨ Nouveau</span>
+              </div>
+              <button class="product-wishlist" title="Favoris">♡</button>
+            </div>
+            <div class="product-info">
+              <div class="product-cat">Hydratation</div>
+              <div class="product-name">Crème Hydratante Luxe</div>
+              <p class="product-desc">
+                Hydratation intense 24h. Formule légère au beurre de karité et
+                aloe vera bio.
+              </p>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="reviews-count">1 560 avis clients</div>
+              <div class="product-footer">
+                <div>
+                  <div class="product-price">28 000 FCFA</div>
+                  <div class="product-price-old">35 000 FCFA</div>
+                </div>
+                <button
+                  class="add-to-cart"
+                  onclick="addToCart(2)"
+                  data-product-id="2"
+                >
+                  🛍️ Ajouter
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card reveal visible"
+            style="transition-delay: 0.2s"
+          >
+            <div class="product-img">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1556228720-195a672e8a03"
+                alt="Huile Précieuse Nuit"
+                loading="lazy"
+              />
+              <div class="product-badges">
+                <span class="badge badge-limited">⚡ Stock limité</span>
+              </div>
+              <button class="product-wishlist" title="Favoris">♡</button>
+            </div>
+            <div class="product-info">
+              <div class="product-cat">Traitement Nuit</div>
+              <div class="product-name">Huile Précieuse Nuit</div>
+              <p class="product-desc">
+                Régénération nocturne intense. Huile de rosier, rétinol naturel
+                et argan précieux.
+              </p>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="reviews-count">980 avis clients</div>
+              <div class="product-footer">
+                <div>
+                  <div class="product-price">42 000 FCFA</div>
+                  <div class="product-price-old">52 000 FCFA</div>
+                </div>
+                <button
+                  class="add-to-cart"
+                  onclick="addToCart(3)"
+                  data-product-id="3"
+                >
+                  🛍️ Ajouter
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card reveal visible"
+            style="transition-delay: 0.30000000000000004s"
+          >
+            <div class="product-img">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1608248597279-f99d160bfcbc"
+                alt="Masque Luminosité"
+                loading="lazy"
+              />
+              <div class="product-badges">
+                <span class="badge badge-bestseller">⭐ Best Seller</span>
+              </div>
+              <button class="product-wishlist" title="Favoris">♡</button>
+            </div>
+            <div class="product-info">
+              <div class="product-cat">Masque de Soin</div>
+              <div class="product-name">Masque Luminosité</div>
+              <p class="product-desc">
+                Masque éclat à l'argile blanche et extraits de fleurs. 1
+                utilisation = 3 jours d'éclat.
+              </p>
+              <div class="stars">⭐⭐⭐⭐☆</div>
+              <div class="reviews-count">2 100 avis clients</div>
+              <div class="product-footer">
+                <div>
+                  <div class="product-price">22 000 FCFA</div>
+                  <div class="product-price-old">28 000 FCFA</div>
+                </div>
+                <button
+                  class="add-to-cart"
+                  onclick="addToCart(4)"
+                  data-product-id="4"
+                >
+                  🛍️ Ajouter
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="text-align: center; margin-top: 40px"
+          class="reveal visible"
+        >
+          <a href="https://wa.me/221777502375" class="btn-gold" target="_blank">
+            💬 Commander tous nos produits — WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials" id="avis">
+      <div class="container">
+        <div class="section-head reveal visible">
+          <div class="section-label">✦ Elles témoignent ✦</div>
+          <h2 class="section-title">Ce que disent nos clientes</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            Plus de 400 000 femmes nous font déjà confiance. Lisez leurs
+            expériences authentiques.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal visible">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              En 2 semaines seulement, ma peau était transformée. Le Sérum Glow
+              Éclat est une merveille ! J'avais des taches depuis des années et
+              maintenant mon teint est unifié et lumineux. Je recommande à
+              toutes mes amies.
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1531746020798-e6953c6e8e04"
+                  alt="Fatou"
+                />
+              </div>
+              <div>
+                <div class="testimonial-name">Fatou D.</div>
+                <div class="testimonial-loc">📍 Dakar, Sénégal</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="verified-badge">✓ Achat vérifié</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-card reveal visible"
+            style="transition-delay: 0.15s"
+          >
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              Kimi est une vraie professionnelle. Sa Crème Hydratante m'a
+              redonné confiance en moi. Ma peau était sèche et terne —
+              maintenant elle brille de l'intérieur. Produit 100% naturel et
+              efficace. Je n'utilise plus rien d'autre !
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1489424731084-a5d8b219a5bb"
+                  alt="Mariama"
+                />
+              </div>
+              <div>
+                <div class="testimonial-name">Mariama K.</div>
+                <div class="testimonial-loc">📍 Thiès, Sénégal</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="verified-badge">✓ Achat vérifié</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-card reveal visible"
+            style="transition-delay: 0.3s"
+          >
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              J'ai commandé l'Huile Précieuse Nuit et c'est mon produit chouchou
+              ! Je l'applique le soir et le matin ma peau est douce comme de la
+              soie. Kimi est une experte passionnée qui comprend vraiment les
+              peaux africaines.
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1521252659862-eec69941b071"
+                  alt="Aminata"
+                />
+              </div>
+              <div>
+                <div class="testimonial-name">Aminata S.</div>
+                <div class="testimonial-loc">📍 Saint-Louis, Sénégal</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <div class="verified-badge">✓ Achat vérifié</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Proof Bar -->
+        <div class="social-proof-bar reveal visible" style="margin-top: 50px">
+          <div class="sp-item">
+            <div class="sp-icon">📸</div>
+            <div>
+              <div class="sp-text">+400 000 followers</div>
+              <div class="sp-sub">Sur Instagram &amp; TikTok</div>
+            </div>
+          </div>
+          <div class="sp-item">
+            <div class="sp-icon">❤️</div>
+            <div>
+              <div class="sp-text">+4 Millions de likes</div>
+              <div class="sp-sub">Nos clientes adorent</div>
+            </div>
+          </div>
+          <div class="sp-item">
+            <div class="sp-icon">⭐</div>
+            <div>
+              <div class="sp-text">Note 4.9/5</div>
+              <div class="sp-sub">Sur 12 400 avis</div>
+            </div>
+          </div>
+          <div class="sp-item">
+            <div class="sp-icon">🏆</div>
+            <div>
+              <div class="sp-text">Marque #1 au Sénégal</div>
+              <div class="sp-sub">Cosmétiques premium</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BEFORE/AFTER ===================== -->
+    <section class="before-after" id="avant-apres">
+      <div class="container">
+        <div class="section-head reveal visible">
+          <div class="section-label" style="color: var(--gold-light)">
+            ✦ Résultats réels ✦
+          </div>
+          <h2 class="section-title" style="color: white">Avant / Après</h2>
+          <p
+            class="section-sub"
+            style="color: rgba(255, 255, 255, 0.6); margin: 0 auto"
+          >
+            Toutes les photos sont authentiques, prises sur de vraies clientes
+            après utilisation de nos soins.
+          </p>
+        </div>
+        <div class="ba-grid">
+          <div class="ba-card reveal visible">
+            <div class="ba-images">
+              <div class="ba-side">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1508214751196-bcfd4ca60f91"
+                  alt="Avant"
+                  style="filter: grayscale(0.5) brightness(0.85)"
+                />
+                <span class="ba-label">Avant</span>
+              </div>
+              <div class="ba-side">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1508214751196-bcfd4ca60f91"
+                  alt="Après"
+                  style="filter: brightness(1.1) saturate(1.2)"
+                />
+                <span class="ba-label">Après</span>
+              </div>
+              <div class="ba-divider"></div>
+            </div>
+            <div class="ba-info">
+              <div class="ba-product">Sérum Glow Éclat</div>
+              <div class="ba-weeks">⏱️ Résultats en 3 semaines</div>
+            </div>
+          </div>
+          <div class="ba-card reveal visible" style="transition-delay: 0.15s">
+            <div class="ba-images">
+              <div class="ba-side">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1531746020798-e6953c6e8e04(1)"
+                  alt="Avant"
+                  style="filter: grayscale(0.4) brightness(0.8) contrast(0.9)"
+                />
+                <span class="ba-label">Avant</span>
+              </div>
+              <div class="ba-side">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1531746020798-e6953c6e8e04(1)"
+                  alt="Après"
+                  style="filter: brightness(1.15) saturate(1.3)"
+                />
+                <span class="ba-label">Après</span>
+              </div>
+              <div class="ba-divider"></div>
+            </div>
+            <div class="ba-info">
+              <div class="ba-product">Crème Hydratante Luxe</div>
+              <div class="ba-weeks">⏱️ Résultats en 2 semaines</div>
+            </div>
+          </div>
+          <div class="ba-card reveal visible" style="transition-delay: 0.3s">
+            <div class="ba-images">
+              <div class="ba-side">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1438761681033-6461ffad8d80"
+                  alt="Avant"
+                  style="filter: grayscale(0.5) brightness(0.8)"
+                />
+                <span class="ba-label">Avant</span>
+              </div>
+              <div class="ba-side">
+                <img
+                  src="./Glow Skin By Kimi — Soins Premium_files/photo-1438761681033-6461ffad8d80"
+                  alt="Après"
+                  style="filter: brightness(1.1) saturate(1.25)"
+                />
+                <span class="ba-label">Après</span>
+              </div>
+              <div class="ba-divider"></div>
+            </div>
+            <div class="ba-info">
+              <div class="ba-product">Huile Précieuse Nuit</div>
+              <div class="ba-weeks">⏱️ Résultats en 4 semaines</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-wrap reveal-left visible">
+            <div class="about-badge-float">
+              <div class="num">7+</div>
+              <div class="lab">Ans d'expertise</div>
+            </div>
+            <div class="about-img-main">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/kimi.jpeg"
+                alt="Kimi — Fondatrice &amp; Cosmétologue"
+              />
+            </div>
+            <div class="about-img-accent">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1556228720-195a672e8a03(1)"
+                alt="Soins Kimi"
+              />
+            </div>
+          </div>
+          <div class="about-text reveal-right visible">
+            <div class="section-label">✦ À propos ✦</div>
+            <h2 class="section-title">
+              Kimi, l'experte<br />derrière le
+              <em style="font-style: italic; color: var(--rose)">Glow</em>
+            </h2>
+            <p class="section-sub" style="margin-bottom: 20px">
+              Cosmétologue certifiée et PDG de Glow Skin By Kimi, j'ai consacré
+              7 années à comprendre et sublimer les peaux africaines. Mon
+              approche combine science moderne et ingrédients naturels pour des
+              résultats visibles et durables.
+            </p>
+            <p
+              style="
+                font-size: 0.9rem;
+                color: var(--gray);
+                line-height: 1.7;
+                margin-bottom: 24px;
+              "
+            >
+              "Chaque femme mérite une peau saine, lumineuse et épanouie. C'est
+              cette conviction qui m'a poussée à créer des formules adaptées à
+              nos peaux, nos besoins, et notre beauté naturelle."
+            </p>
+            <div class="about-credentials">
+              <div class="credential">
+                <span class="icon">🎓</span> Cosmétologue certifiée
+              </div>
+              <div class="credential">
+                <span class="icon">👑</span> PDG &amp; Fondatrice
+              </div>
+              <div class="credential">
+                <span class="icon">🔬</span> Formules brevetées
+              </div>
+              <div class="credential">
+                <span class="icon">🌿</span> Ingrédients naturels
+              </div>
+            </div>
+            <div class="about-values">
+              <div class="about-value">
+                <div class="about-value-icon">🧪</div>
+                <div class="about-value-title">Formules Scientifiques</div>
+                <div class="about-value-text">
+                  Développées en laboratoire pour des résultats prouvés
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-icon">🌺</div>
+                <div class="about-value-title">100% Naturel</div>
+                <div class="about-value-text">
+                  Ingrédients sélectionnés sans produits nocifs
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-icon">🏆</div>
+                <div class="about-value-title">Marque Primée</div>
+                <div class="about-value-text">
+                  Reconnue comme référence en Afrique de l'Ouest
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="about-value-icon">💝</div>
+                <div class="about-value-title">Made with Love</div>
+                <div class="about-value-text">
+                  Chaque produit formulé avec passion et soin
+                </div>
+              </div>
+            </div>
+            <div style="margin-top: 30px">
+              <a
+                href="https://wa.me/221777502375"
+                class="btn-primary"
+                target="_blank"
+              >
+                💬 Parler à Kimi directement
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head reveal visible">
+          <div class="section-label">✦ Nos Services ✦</div>
+          <h2 class="section-title">Une Expertise Complète</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            Bien au-delà des soins topiques, Kimi propose une approche
+            holistique pour une beauté totale.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal visible">
+            <div class="service-img">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1519494026892-80bbd2d6fd0d"
+                alt="Injection IV"
+              />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-body">
+              <div class="service-icon">💉</div>
+              <div class="service-title">Injection IV Beauté</div>
+              <p class="service-desc">
+                Perfusions de vitamines et antioxydants pour un éclat intense de
+                l'intérieur. Résultats immédiats et durables.
+              </p>
+              <div class="service-price">Sur devis — Contact WhatsApp</div>
+            </div>
+          </div>
+          <div
+            class="service-card reveal visible"
+            style="transition-delay: 0.15s"
+          >
+            <div class="service-img">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1570172619644-dfd03ed5d881"
+                alt="Soins esthétiques"
+              />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-body">
+              <div class="service-icon">✨</div>
+              <div class="service-title">Soins Esthétiques</div>
+              <p class="service-desc">
+                Soins du visage professionnels, peeling, éclat, hydratation
+                profonde. Chaque soin est personnalisé selon votre type de peau.
+              </p>
+              <div class="service-price">À partir de 25 000 FCFA</div>
+            </div>
+          </div>
+          <div
+            class="service-card reveal visible"
+            style="transition-delay: 0.3s"
+          >
+            <div class="service-img">
+              <img
+                src="./Glow Skin By Kimi — Soins Premium_files/photo-1556228578-8c89e6adf883"
+                alt="Compléments alimentaires"
+              />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-body">
+              <div class="service-icon">💊</div>
+              <div class="service-title">Compléments Alimentaires</div>
+              <p class="service-desc">
+                Formules nutritionnelles pour une beauté de l'intérieur.
+                Collagène, vitamines, probiotiques sélectionnés par Kimi.
+              </p>
+              <div class="service-price">À partir de 18 000 FCFA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== URGENCY ===================== -->
+    <section class="urgency">
+      <div class="container">
+        <div class="urgency-content reveal visible">
+          <div class="urgency-label">⚡ Offre du moment ⚡</div>
+          <h2 class="urgency-title">Nos produits partent très vite</h2>
+          <p class="urgency-sub">
+            Ne laissez pas votre peau attendre. Des centaines de commandes
+            chaque jour — les stocks se vident rapidement.
+          </p>
+          <div class="stock-bar">
+            <div class="stock-text">
+              <span>🔥 Stock disponible</span>
+              <span>72% vendus</span>
+            </div>
+            <div class="stock-track"><div class="stock-fill"></div></div>
+          </div>
+          <div class="countdown-wrap">
+            <div class="countdown-item">
+              <div class="countdown-num" id="cH">03</div>
+              <div class="countdown-lab">Heures</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-num" id="cM">46</div>
+              <div class="countdown-lab">Minutes</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-num" id="cS">20</div>
+              <div class="countdown-lab">Secondes</div>
+            </div>
+          </div>
+          <div class="urgency-actions">
+            <a
+              href="#produits"
+              class="btn-primary"
+              style="animation: pulse 2.5s ease-in-out infinite"
+            >
+              🛍️ Commander maintenant
+            </a>
+            <a
+              href="https://wa.me/221777502375"
+              class="btn-gold"
+              target="_blank"
+            >
+              💬 WhatsApp direct
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INSTAGRAM WALL ===================== -->
+    <section class="social-wall" id="social">
+      <div class="container">
+        <div
+          class="section-head reveal visible"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 0;
+          "
+        >
+          <div>
+            <div class="section-label">✦ @GlowSkinByKimi ✦</div>
+            <h2 class="section-title" style="margin-bottom: 0">
+              Notre communauté brille
+            </h2>
+          </div>
+          <a
+            href="https://wa.me/221777502375"
+            class="btn-outline"
+            target="_blank"
+            >Rejoindre la communauté →</a
+          >
+        </div>
+        <div class="insta-grid reveal visible" style="margin-top: 30px">
+          <div class="insta-item">
+            <img
+              src="./Glow Skin By Kimi — Soins Premium_files/photo-1596462502278-27bfdc403348(1)"
+              alt="Instagram 1"
+            />
+            <div class="insta-overlay">❤️</div>
+          </div>
+          <div class="insta-item">
+            <img
+              src="./Glow Skin By Kimi — Soins Premium_files/photo-1620916566398-39f1143ab7be(2)"
+              alt="Instagram 2"
+            />
+            <div class="insta-overlay">❤️</div>
+          </div>
+          <div class="insta-item">
+            <img
+              src="./Glow Skin By Kimi — Soins Premium_files/photo-1556228578-8c89e6adf883(1)"
+              alt="Instagram 3"
+            />
+            <div class="insta-overlay">❤️</div>
+          </div>
+          <div class="insta-item">
+            <img
+              src="./Glow Skin By Kimi — Soins Premium_files/photo-1570172619644-dfd03ed5d881(1)"
+              alt="Instagram 4"
+            />
+            <div class="insta-overlay">❤️</div>
+          </div>
+          <div class="insta-item">
+            <img
+              src="./Glow Skin By Kimi — Soins Premium_files/photo-1531746020798-e6953c6e8e04(2)"
+              alt="Instagram 5"
+            />
+            <div class="insta-overlay">❤️</div>
+          </div>
+          <div class="insta-item">
+            <img
+              src="./Glow Skin By Kimi — Soins Premium_files/photo-1508214751196-bcfd4ca60f91(1)"
+              alt="Instagram 6"
+            />
+            <div class="insta-overlay">❤️</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NEWSLETTER ===================== -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-inner reveal visible">
+          <div class="section-label">✦ Restez informée ✦</div>
+          <h2 class="section-title">Offres exclusives &amp; conseils beauté</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            Rejoignez notre communauté et recevez des conseils de Kimi + des
+            réductions exclusives.
+          </p>
+          <div class="newsletter-form">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="Votre adresse email..."
+              id="nlEmail"
+            />
+            <button class="btn-primary" onclick="subscribeNewsletter()">
+              S'abonner ✦
+            </button>
+          </div>
+          <div
+            id="nlMsg"
+            style="
+              margin-top: 12px;
+              font-size: 0.85rem;
+              color: var(--rose);
+              font-weight: 600;
+              display: none;
+            "
+          >
+            ✅ Merci ! Vous recevrez bientôt vos offres exclusives.
+          </div>
+          <p style="margin-top: 12px; font-size: 0.78rem; color: var(--gray)">
+            🔒 Vos données sont protégées. Désabonnement facile à tout moment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal-left visible">
+            <div class="section-label">✦ Contact ✦</div>
+            <h2 class="section-title">Parlons de<br />votre peau</h2>
+            <p class="section-sub">
+              Kimi et son équipe sont disponibles pour vous conseiller, répondre
+              à vos questions et prendre en charge votre commande.
+            </p>
+            <div class="contact-methods">
+              <a
+                href="https://wa.me/221777502375"
+                class="contact-method"
+                target="_blank"
+              >
+                <div class="cm-icon">💬</div>
+                <div>
+                  <div class="cm-label">WhatsApp (Prioritaire)</div>
+                  <div class="cm-value">+221 77 750 23 75</div>
+                </div>
+              </a>
+              <div class="contact-method">
+                <div class="cm-icon">📍</div>
+                <div>
+                  <div class="cm-label">Localisation</div>
+                  <div class="cm-value">Dakar, Sénégal</div>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="cm-icon">🕐</div>
+                <div>
+                  <div class="cm-label">Disponibilité</div>
+                  <div class="cm-value">Lun – Sam : 8h à 21h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrap reveal-right visible">
+            <div class="section-label">✦ Envoyez un message ✦</div>
+            <h3
+              style="
+                font-family: var(--font-display);
+                font-size: 1.4rem;
+                margin-bottom: 24px;
+                color: var(--dark);
+              "
+            >
+              Nous vous répondons en moins d'1h
+            </h3>
+            <div class="form-group">
+              <label class="form-label">Votre prénom</label>
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Ex: Fatou"
+                id="formName"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">WhatsApp / Téléphone</label>
+              <input
+                type="tel"
+                class="form-input"
+                placeholder="+221 7X XXX XX XX"
+                id="formPhone"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Votre message</label>
+              <textarea
+                class="form-textarea"
+                placeholder="Dites-nous ce qui vous intéresse..."
+                id="formMsg"
+              ></textarea>
+            </div>
+            <button
+              class="btn-primary"
+              style="width: 100%; justify-content: center"
+              onclick="sendContact()"
+            >
+              💬 Envoyer via WhatsApp
+            </button>
+            <div
+              id="formSuccess"
+              style="
+                margin-top: 12px;
+                font-size: 0.85rem;
+                color: #28a745;
+                font-weight: 600;
+                display: none;
+              "
+            >
+              ✅ Message envoyé ! Kimi vous répond bientôt.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">
+              <span class="logo-text">Glow Skin By Kimi</span>
+              <span class="logo-sub">Soins Premium ✦ Dakar</span>
+            </div>
+            <p class="footer-brand-text">
+              Des soins conçus par une experte pour révéler la beauté naturelle
+              de chaque femme. Science, nature et passion au service de votre
+              peau.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link" title="Instagram">📸</a>
+              <a href="#" class="social-link" title="TikTok">🎵</a>
+              <a href="#" class="social-link" title="Facebook">👥</a>
+              <a
+                href="https://wa.me/221777502375"
+                class="social-link"
+                title="WhatsApp"
+                target="_blank"
+                >💬</a
+              >
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Navigation</div>
+            <ul class="footer-links">
+              <li>
+                <a href="#produits">Nos Produits</a>
+              </li>
+              <li>
+                <a href="#services">Nos Services</a>
+              </li>
+              <li>
+                <a href="#avant-apres">Avant / Après</a>
+              </li>
+              <li>
+                <a href="#about">À Propos de Kimi</a>
+              </li>
+              <li>
+                <a href="#avis">Témoignages</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Produits</div>
+            <ul class="footer-links">
+              <li>
+                <a href="#produits">Sérum Glow Éclat</a>
+              </li>
+              <li>
+                <a href="#produits">Crème Hydratante</a>
+              </li>
+              <li>
+                <a href="#produits">Huile Nuit</a>
+              </li>
+              <li>
+                <a href="#produits">Masque Luminosité</a>
+              </li>
+              <li>
+                <a href="#produits">Compléments Beauté</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Contact</div>
+            <ul class="footer-links">
+              <li>
+                <a href="https://wa.me/221777502375" target="_blank"
+                  >💬 WhatsApp Direct</a
+                >
+              </li>
+              <li>
+                <a href="#contact">Formulaire Contact</a>
+              </li>
+              <li>
+                <a href="#">Politique de livraison</a>
+              </li>
+              <li>
+                <a href="#">Retours &amp; remboursements</a>
+              </li>
+              <li>
+                <a href="#">Mentions légales</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-text">
+            © 2024 Glow Skin By Kimi — Tous droits réservés ✦ Dakar, Sénégal
+          </div>
+          <div class="footer-badges">
+            <span class="footer-badge">🔒 Paiement sécurisé</span>
+            <span class="footer-badge">🚚 Livraison rapide</span>
+            <span class="footer-badge">✨ Produits naturels</span>
+            <span class="footer-badge">💯 Satisfait ou remboursé</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================== STICKY WHATSAPP ===================== -->
+    <div class="whatsapp-sticky">
+      <div class="whatsapp-tooltip" id="waTooltip">
+        Commandez maintenant 👋<br />
+        <strong>+221 77 750 23 75</strong>
+      </div>
+      <a
+        href="https://wa.me/221777502375"
+        class="whatsapp-btn"
+        target="_blank"
+        title="Commander sur WhatsApp"
+        id="waBtnMain"
+      >
+        <span class="whatsapp-ring"></span>
+        💬
+      </a>
+    </div>
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+    <script>
+      // ============================================================
+      // DATA: PRODUITS
+      // ============================================================
+      const PRODUCTS = [
+        {
+          id: 1,
+          name: "Sérum Glow Éclat",
+          category: "Soins du Visage",
+          price: 35000,
+          oldPrice: 42000,
+          desc: "Notre sérum signature pour un teint lumineux. Formule à l'acide hyaluronique et vitamine C.",
+          img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=80",
+          badges: ["bestseller", "hot"],
+          stars: 5,
+          reviews: 2840,
+        },
+        {
+          id: 2,
+          name: "Crème Hydratante Luxe",
+          category: "Hydratation",
+          price: 28000,
+          oldPrice: 35000,
+          desc: "Hydratation intense 24h. Formule légère au beurre de karité et aloe vera bio.",
+          img: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&q=80",
+          badges: ["new"],
+          stars: 5,
+          reviews: 1560,
+        },
+        {
+          id: 3,
+          name: "Huile Précieuse Nuit",
+          category: "Traitement Nuit",
+          price: 42000,
+          oldPrice: 52000,
+          desc: "Régénération nocturne intense. Huile de rosier, rétinol naturel et argan précieux.",
+          img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&q=80",
+          badges: ["limited"],
+          stars: 5,
+          reviews: 980,
+        },
+        {
+          id: 4,
+          name: "Masque Luminosité",
+          category: "Masque de Soin",
+          price: 22000,
+          oldPrice: 28000,
+          desc: "Masque éclat à l'argile blanche et extraits de fleurs. 1 utilisation = 3 jours d'éclat.",
+          img: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&q=80",
+          badges: ["bestseller"],
+          stars: 4,
+          reviews: 2100,
+        },
+      ];
+
+      // ============================================================
+      // CART STATE
+      // ============================================================
+      let cart = {};
+
+      function formatPrice(n) {
+        return n.toLocaleString("fr-FR") + " FCFA";
+      }
+
+      function getCartCount() {
+        return Object.values(cart).reduce((sum, item) => sum + item.qty, 0);
+      }
+
+      function getCartTotal() {
+        return Object.values(cart).reduce(
+          (sum, item) => sum + item.price * item.qty,
+          0,
+        );
+      }
+
+      function addToCart(productId) {
+        const p = PRODUCTS.find((x) => x.id === productId);
+        if (!p) return;
+        if (cart[productId]) {
+          cart[productId].qty++;
+        } else {
+          cart[productId] = { ...p, qty: 1 };
+        }
+        updateCartUI();
+        animateCartBadge();
+        showAddedFeedback(productId);
+      }
+
+      function removeFromCart(productId) {
+        delete cart[productId];
+        updateCartUI();
+      }
+
+      function updateQty(productId, delta) {
+        if (!cart[productId]) return;
+        cart[productId].qty += delta;
+        if (cart[productId].qty <= 0) {
+          removeFromCart(productId);
+        } else {
+          updateCartUI();
+        }
+      }
+
+      function updateCartUI() {
+        const count = getCartCount();
+        const total = getCartTotal();
+        document.getElementById("cartBadge").textContent = count;
+
+        const itemsEl = document.getElementById("cartItems");
+        const footerEl = document.getElementById("cartFooter");
+        const totalEl = document.getElementById("cartTotal");
+
+        totalEl.textContent = formatPrice(total);
+
+        if (count === 0) {
+          footerEl.style.display = "none";
+          itemsEl.innerHTML = `
+      <div class="cart-empty">
+        <div class="cart-empty-icon">🛍️</div>
+        <div style="font-weight:700;color:var(--dark)">Votre panier est vide</div>
+        <div style="font-size:0.85rem">Découvrez nos soins premium</div>
+        <button class="btn-primary" onclick="closeCart()">Explorer les produits</button>
+      </div>`;
+          return;
+        }
+
+        footerEl.style.display = "block";
+        itemsEl.innerHTML = Object.values(cart)
+          .map(
+            (item) => `
+    <div class="cart-item">
+      <div class="cart-item-img">
+        <img src="${item.img}" alt="${item.name}" />
+      </div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">${formatPrice(item.price)}</div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="updateQty(${item.id}, -1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="updateQty(${item.id}, 1)">+</button>
+          <button class="cart-remove" onclick="removeFromCart(${item.id})">🗑️</button>
+        </div>
+      </div>
+    </div>
+  `,
+          )
+          .join("");
+      }
+
+      function animateCartBadge() {
+        const badge = document.getElementById("cartBadge");
+        badge.classList.remove("bounce");
+        void badge.offsetWidth;
+        badge.classList.add("bounce");
+      }
+
+      function showAddedFeedback(productId) {
+        const btn = document.querySelector(`[data-product-id="${productId}"]`);
+        if (!btn) return;
+        const orig = btn.innerHTML;
+        btn.innerHTML = "✅ Ajouté !";
+        btn.classList.add("added");
+        setTimeout(() => {
+          btn.innerHTML = orig;
+          btn.classList.remove("added");
+        }, 1800);
+      }
+
+      // ============================================================
+      // RENDER PRODUCTS
+      // ============================================================
+      function renderProducts() {
+        const grid = document.getElementById("productsGrid");
+        const badgeMap = {
+          bestseller:
+            '<span class="badge badge-bestseller">⭐ Best Seller</span>',
+          hot: '<span class="badge badge-hot">🔥 Très demandé</span>',
+          new: '<span class="badge badge-new">✨ Nouveau</span>',
+          limited: '<span class="badge badge-limited">⚡ Stock limité</span>',
+        };
+        const starsHtml = (n) =>
+          "⭐".repeat(n) + (n < 5 ? "☆".repeat(5 - n) : "");
+
+        grid.innerHTML = PRODUCTS.map(
+          (p, i) => `
+    <div class="product-card reveal" style="transition-delay:${i * 0.1}s">
+      <div class="product-img">
+        <img src="${p.img}" alt="${p.name}" loading="lazy" />
+        <div class="product-badges">
+          ${p.badges.map((b) => badgeMap[b] || "").join("")}
+        </div>
+        <button class="product-wishlist" title="Favoris">♡</button>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">${p.category}</div>
+        <div class="product-name">${p.name}</div>
+        <p class="product-desc">${p.desc}</p>
+        <div class="stars">${starsHtml(p.stars)}</div>
+        <div class="reviews-count">${p.reviews.toLocaleString("fr-FR")} avis clients</div>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">${formatPrice(p.price)}</div>
+            <div class="product-price-old">${formatPrice(p.oldPrice)}</div>
+          </div>
+          <button class="add-to-cart" onclick="addToCart(${p.id})" data-product-id="${p.id}">
+            🛍️ Ajouter
+          </button>
+        </div>
+      </div>
+    </div>
+  `,
+        ).join("");
+      }
+
+      // ============================================================
+      // CART OPEN / CLOSE
+      // ============================================================
+      function openCart() {
+        document.getElementById("cartSidebar").classList.add("open");
+        document.getElementById("cartOverlay").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function closeCart() {
+        document.getElementById("cartSidebar").classList.remove("open");
+        document.getElementById("cartOverlay").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      document.getElementById("cartBtn").addEventListener("click", openCart);
+      document.getElementById("cartClose").addEventListener("click", closeCart);
+      document
+        .getElementById("cartOverlay")
+        .addEventListener("click", closeCart);
+
+      // ============================================================
+      // WHATSAPP ORDER
+      // ============================================================
+      function orderWhatsApp() {
+        if (getCartCount() === 0) {
+          window.open(
+            "https://wa.me/221777502375?text=Bonjour%20Kimi%2C%20je%20voudrais%20commander%20vos%20produits%20Glow%20Skin%20%F0%9F%8C%9F",
+            "_blank",
+          );
+          return;
+        }
+        const items = Object.values(cart)
+          .map(
+            (item) =>
+              `• ${item.name} x${item.qty} = ${formatPrice(item.price * item.qty)}`,
+          )
+          .join("%0A");
+        const total = formatPrice(getCartTotal());
+        const msg = `Bonjour Kimi ! 🌟%0A%0AJe voudrais commander :%0A${items}%0A%0A*Total : ${total}*%0A%0AMerci !`;
+        window.open(`https://wa.me/221777502375?text=${msg}`, "_blank");
+      }
+
+      // ============================================================
+      // MOBILE NAV
+      // ============================================================
+
+      // ============================================================
+      // HEADER SCROLL
+      // ============================================================
+      window.addEventListener("scroll", () => {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+      });
+
+      // ============================================================
+      // SCROLL REVEAL
+      // ============================================================
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      function initReveal() {
+        document
+          .querySelectorAll(".reveal, .reveal-left, .reveal-right")
+          .forEach((el) => {
+            revealObserver.observe(el);
+          });
+      }
+
+      // ============================================================
+      // COUNTER ANIMATION
+      // ============================================================
+      function animateCounters() {
+        const counters = document.querySelectorAll(".count");
+        const obs = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.dataset.target);
+                let current = 0;
+                const step = target / 50;
+                const timer = setInterval(() => {
+                  current += step;
+                  if (current >= target) {
+                    el.textContent = target;
+                    clearInterval(timer);
+                  } else {
+                    el.textContent = Math.floor(current);
+                  }
+                }, 30);
+                obs.unobserve(el);
+              }
+            });
+          },
+          { threshold: 0.5 },
+        );
+        counters.forEach((el) => obs.observe(el));
+      }
+
+      // ============================================================
+      // COUNTDOWN TIMER
+      // ============================================================
+      function initCountdown() {
+        let h = 3,
+          m = 47,
+          s = 22;
+        const hEl = document.getElementById("cH");
+        const mEl = document.getElementById("cM");
+        const sEl = document.getElementById("cS");
+
+        setInterval(() => {
+          s--;
+          if (s < 0) {
+            s = 59;
+            m--;
+          }
+          if (m < 0) {
+            m = 59;
+            h--;
+          }
+          if (h < 0) {
+            h = 3;
+            m = 59;
+            s = 59;
+          }
+          hEl.textContent = String(h).padStart(2, "0");
+          mEl.textContent = String(m).padStart(2, "0");
+          sEl.textContent = String(s).padStart(2, "0");
+        }, 1000);
+      }
+
+      // ============================================================
+      // NEWSLETTER
+      // ============================================================
+      function subscribeNewsletter() {
+        const email = document.getElementById("nlEmail").value;
+        const msg = document.getElementById("nlMsg");
+        if (email && email.includes("@")) {
+          msg.style.display = "block";
+          document.getElementById("nlEmail").value = "";
+        } else {
+          document.getElementById("nlEmail").style.borderColor = "var(--rose)";
+          document.getElementById("nlEmail").placeholder =
+            "⚠️ Entrez un email valide";
+        }
+      }
+
+      // ============================================================
+      // CONTACT FORM
+      // ============================================================
+      function sendContact() {
+        const name = document.getElementById("formName").value;
+        const phone = document.getElementById("formPhone").value;
+        const msg = document.getElementById("formMsg").value;
+
+        if (!name || !phone) {
+          alert("Veuillez renseigner au moins votre prénom et WhatsApp 😊");
+          return;
+        }
+
+        const waMsg = `Bonjour Kimi ! Je m'appelle *${name}*%0ATéléphone : ${phone}%0A%0A${msg || "Je suis intéressée par vos produits !"}`;
+        window.open(`https://wa.me/221777502375?text=${waMsg}`, "_blank");
+
+        document.getElementById("formSuccess").style.display = "block";
+        document.getElementById("formName").value = "";
+        document.getElementById("formPhone").value = "";
+        document.getElementById("formMsg").value = "";
+      }
+
+      // ============================================================
+      // WISHLIST TOGGLE
+      // ============================================================
+      document.addEventListener("click", (e) => {
+        if (e.target.closest(".product-wishlist")) {
+          const btn = e.target.closest(".product-wishlist");
+          const isWished = btn.textContent === "♥";
+          btn.textContent = isWished ? "♡" : "♥";
+          btn.style.color = isWished ? "" : "var(--rose)";
+          btn.style.background = isWished ? "" : "rgba(194,24,91,0.1)";
+        }
+      });
+
+      // ============================================================
+      // WHATSAPP TOOLTIP HIDE
+      // ============================================================
+      setTimeout(() => {
+        document.getElementById("waTooltip").classList.remove("show");
+      }, 6000);
+      document.getElementById("waBtnMain").addEventListener("click", () => {
+        document.getElementById("waTooltip").classList.remove("show");
+      });
+
+      // ============================================================
+      // INIT
+      // ============================================================
+      function closeMobileNav() {
+        document.getElementById("mobileNav").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderProducts();
+        initReveal();
+        animateCounters();
+        initCountdown();
+        updateCartUI();
+
+        // Écouteurs pour le Panier
+        document.getElementById("cartBtn").addEventListener("click", openCart);
+        document
+          .getElementById("cartClose")
+          .addEventListener("click", closeCart);
+        document
+          .getElementById("cartOverlay")
+          .addEventListener("click", closeCart);
+
+        // Écouteurs pour le Menu Mobile
+        const hamburger = document.getElementById("hamburger");
+        if (hamburger) {
+          hamburger.addEventListener("click", () => {
+            document.getElementById("mobileNav").classList.add("open");
+            document.body.style.overflow = "hidden";
+          });
+        }
+
+        document
+          .getElementById("mobileNavClose")
+          .addEventListener("click", closeMobileNav);
+        document
+          .getElementById("mobileNavOverlay")
+          .addEventListener("click", closeMobileNav);
+
+        // Re-observe products after render
+        setTimeout(() => {
+          document.querySelectorAll(".reveal:not(.visible)").forEach((el) => {
+            revealObserver.observe(el);
+          });
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
+
     <meta
       name="description"
       content="Révélez votre glow naturel avec Glow Skin By Kimi. Soins conçus par une cosmétologue experte pour sublimer votre peau."
