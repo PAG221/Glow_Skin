@@ -457,12 +457,15 @@
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
-        padding: 4px;
+        padding: 8px;
+        background: transparent;
+        border: none;
+        outline: none;
       }
       .hamburger span {
         display: block;
         width: 24px;
-        height: 2px;
+        height: 3px;
         background: var(--dark);
         border-radius: 2px;
         transition: all 0.3s;
@@ -2945,7 +2948,7 @@
             </div>
             <div class="about-img-main">
               <img
-                src="./Glow Skin By Kimi — Soins Premium_files/kimi.jpeg"
+                src="./Glow Skin By Kimi — Soins Premium_files/Kimi.jpeg"
                 alt="Kimi — Fondatrice &amp; Cosmétologue"
               />
             </div>
@@ -3980,12 +3983,42 @@
       // ============================================================
       // INIT
       // ============================================================
+      function closeMobileNav() {
+        document.getElementById("mobileNav").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         renderProducts();
         initReveal();
         animateCounters();
         initCountdown();
         updateCartUI();
+
+        // Écouteurs pour le Panier
+        document.getElementById("cartBtn").addEventListener("click", openCart);
+        document
+          .getElementById("cartClose")
+          .addEventListener("click", closeCart);
+        document
+          .getElementById("cartOverlay")
+          .addEventListener("click", closeCart);
+
+        // Écouteurs pour le Menu Mobile
+        const hamburger = document.getElementById("hamburger");
+        if (hamburger) {
+          hamburger.addEventListener("click", () => {
+            document.getElementById("mobileNav").classList.add("open");
+            document.body.style.overflow = "hidden";
+          });
+        }
+
+        document
+          .getElementById("mobileNavClose")
+          .addEventListener("click", closeMobileNav);
+        document
+          .getElementById("mobileNavOverlay")
+          .addEventListener("click", closeMobileNav);
 
         // Re-observe products after render
         setTimeout(() => {
